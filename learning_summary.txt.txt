@@ -1,0 +1,28 @@
+
+LEARNING SUMMARY: SUPPLY CHAIN DATASET EXPLORATORY ANALYSIS
+_______________________________________________________________
+
+Q 1. WHAT YOU UNDERSTOOD FROM THE DATASET?
+Basically, the dataset contains the information about a particular asset where that asset is ,a unique ID ia alocated its working temperature , the amount of vibration it produce again it contains the last date that particular asset was maintained, giving Condition_score, Delivery_efficiency and Resource_utilisation on the scale of 0 to 100 again it contains the info about Downtime hours
+,inventory level , logistics cost and the time at which the info where recorded i.e. Timestamp and on this basis supplychain efficiency label is given that can be 0,1,2 . So basically this datasets is all about studying the supplychain efficiency label on the basis of given above parameter.
+
+
+Q 2.WHAT CHALLANGES YOU FACED DURING THE ANALYSIS?
+So at first when i started analysing the data they were not making any sense to me and i was like how should i start analysing ? then , i plotted correlation  heatmap between the data and i got the insight that somewhat delivery efficiency and resource utilization are the one  majorly affecting the labelling and then i  plotted a distplot between supplychain efficiency label and resource utilisation which didn't show clear boundary for label 0, label 1 and label 2 ,  so  i descided to plot collectively for resource utilization , delivery efficiency and for supplychain efficiency label and but there again problem arised for label 1 and label 2 then i had to look at feature which differenciats label 1 from label 2 ,so made a seperate dataframe  for supplychain efficiency label 2 then i tried to look at various features and then i not9iced downtime hours  of label 2 was much lower as compared to label 1 and then i plotted boxplot for downtime hours of each label and it clearly showed the gap between label 1 and label 2 for downtime hours . Since it was my first time observing datas it was not easy to draw conclusion instantly.
+
+
+Q 3. WHAT VISUALISATION WERE MOST USEFUL?
+so basically i started with univariant analysis and my brain in starting was stuck on inventory level and even i though most of supply chain efficiency label should be dependent on condition score so when i plotted countplot in case of inventory  level i realised that labelling are not dependent on inventory level and even condition score and vibration had no relation 
+so most important visualisation the collective effect of resource utilization and delivery efficiency and again the effect of downtime hours for distinguishing label 1 and label 2
+
+
+Q 4. WHAT INSIGHT YOU DISCOVERED?
+The insights that i discovered that for label 2 we require high delivery efficiency, high resource utilization as well as low downtime hours
+and for label 1 we require high delivery  efficiency and high resource utilization
+
+
+Q 5.WHAT YOU LEARNED ABOUT EDA AND DATA ANALYSIS?
+Through this project, I learned that Exploratory Data Analysis (EDA) is an iterative, detective-like process. It is not just about writing clean code or generating pretty charts, but about asking deeper questions when patterns emerge. I realized how critical data cleaning, understanding data types (continuous vs. discrete), and checking distributions are before drawing conclusions. EDA bridges raw, chaotic numbers into clear, actionable business strategies.
+
+
+ 
